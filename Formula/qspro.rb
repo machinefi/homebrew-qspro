@@ -1,8 +1,8 @@
 class Qspro < Formula
   desc "OpenAI-compatible CLI for QuickSilver Pro — DeepSeek V3, R1, Qwen 3.5"
   homepage "https://quicksilverpro.io"
-  url "https://files.pythonhosted.org/packages/PLACEHOLDER/quicksilverpro-0.1.0.tar.gz"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  url "https://files.pythonhosted.org/packages/08/07/526b0e1762b4f56c1acb5724b831879ef5734e1c52ac50caa17150532382/quicksilverpro-0.1.0.tar.gz"
+  sha256 "2ad04ffa4aab06bc9a9a4b5efe6ff36749e232a03fa8e6a9bf30836699a65203"
   license "MIT"
   head "https://github.com/machinefi/qspro-cli.git", branch: "main"
 
