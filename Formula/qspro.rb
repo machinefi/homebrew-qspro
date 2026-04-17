@@ -1,8 +1,8 @@
 class Qspro < Formula
   desc "OpenAI-compatible CLI for QuickSilver Pro — DeepSeek V3, R1, Qwen 3.5"
   homepage "https://quicksilverpro.io"
-  url "https://files.pythonhosted.org/packages/e4/e8/c99a1dc7144caafb7244e2a20c346f9ddc4924ffbff3827b46a22eaf0e2e/quicksilverpro-0.1.1.tar.gz"
-  sha256 "35298303dff08f0f921daf6df85d35bb3615cae882a56a841b0700900a6a2d8b"
+  url "https://files.pythonhosted.org/packages/1c/db/0df99168a8490e68c727191c1f0cfe40bdfc407f79c22980173d4191a18f/quicksilverpro-0.1.2.tar.gz"
+  sha256 "f52503603c773d996741c934c93c18e90d3e1a898c2c1a9c66751f0ce9016534"
   license "MIT"
   head "https://github.com/machinefi/qspro-cli.git", branch: "main"
 
@@ -16,7 +16,7 @@ class Qspro < Formula
     venv_pip = libexec/"bin/pip"
 
     # Install from PyPI (url+sha above); pins to the exact released version.
-    system venv_pip, "install", "--no-cache-dir", "quicksilverpro==0.1.1"
+    system venv_pip, "install", "--no-cache-dir", "quicksilverpro==0.1.2"
 
     # Expose both the short and long entry points.
     %w[qsp quicksilverpro].each do |cmd|
