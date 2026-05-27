@@ -1,5 +1,5 @@
 class Qspro < Formula
-  desc "OpenAI-compatible CLI for QuickSilver Pro — DeepSeek V3, R1, Qwen 3.5"
+  desc "OpenAI-compatible CLI for QuickSilver Pro — LLM chat and FLUX image generation"
   homepage "https://quicksilverpro.io"
   url "https://files.pythonhosted.org/packages/84/73/99038add11943cc8b8b79ae7c9aeedce633501f9aed29585a8168c9d0040/quicksilverpro-0.2.0.tar.gz"
   sha256 "5e2471f7d500973b83c4e774daa7cdb9905597119aabf4935997607e4d888886"
@@ -27,9 +27,10 @@ class Qspro < Formula
   def caveats
     <<~EOS
       Get started:
-        qsp init             # opens dashboard, paste your API key
-        qsp chat "Hello"     # one-shot streaming chat (deepseek-v3 by default)
-        qsp balance          # credits remaining
+        qsp init                       # opens dashboard, paste your API key
+        qsp chat "Hello"               # one-shot streaming chat (deepseek-v4-flash by default)
+        qsp image "a fox" -o fox.jpg   # text-to-image (FLUX)
+        qsp balance                    # credits remaining
         qsp --help
 
       Docs: https://quicksilverpro.io/dashboard#quickstart
@@ -38,6 +39,6 @@ class Qspro < Formula
   end
 
   test do
-    assert_match "qsp", shell_output("#{bin}/qsp --version 2>&1", 0)
+    assert_match "qsp", shell_output("#{bin}/qsp --version 2>&1")
   end
 end
