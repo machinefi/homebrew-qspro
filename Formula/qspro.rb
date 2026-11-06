@@ -1,8 +1,8 @@
 class Qspro < Formula
   desc "OpenAI-compatible CLI for QuickSilver Pro — LLM chat and FLUX image generation"
   homepage "https://quicksilverpro.io"
-  url "https://files.pythonhosted.org/packages/df/10/0028740af07d8f263d9045af7f566d967dafcdbed0f229661a7edce60d05/quicksilverpro-0.5.0.tar.gz"
-  sha256 "15368fe34a819a10cfb5c79302d075862b78d7b02b5feb7e43ca56035bb2abcb"
+  url "https://files.pythonhosted.org/packages/8a/4e/3e66ce3efdd18c8b25138c7a145985bba696a7f1784d05324570e5aec3d4/quicksilverpro-0.5.1.tar.gz"
+  sha256 "daab1021d6d90371b17dbcac0fc777d852c2afc4f67ee415fef6a263c76807fd"
   license "MIT"
   head "https://github.com/machinefi/qspro-cli.git", branch: "main"
 
@@ -16,7 +16,7 @@ class Qspro < Formula
     venv_pip = libexec/"bin/pip"
 
     # Install from PyPI (url+sha above); pins to the exact released version.
-    system venv_pip, "install", "--no-cache-dir", "quicksilverpro==0.5.0"
+    system venv_pip, "install", "--no-cache-dir", "quicksilverpro==0.5.1"
 
     # Expose both the short and long entry points.
     %w[qsp quicksilverpro].each do |cmd|
